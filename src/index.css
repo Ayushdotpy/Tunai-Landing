@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* ─── Fonts ──────────────────────────────────────────────────────────────── */
+  --font-sans: "Inter", sans-serif;
+  --font-display: "Inter", sans-serif;
+  --font-mosvita: "Mosvita", sans-serif;
+  --font-outfit: "Outfit", sans-serif;
+
+  /* ─── Type Scale ─────────────────────────────────────────────────────────── */
+  /* Headings */
+  --text-h1-desktop: 48px;
+  --text-h1-desktop--line-height: 1;
+  --text-h1-desktop--letter-spacing: -0.04em;
+
+  --text-h1-mobile: 32px;
+  --text-h1-mobile--line-height: 1.1;
+  --text-h1-mobile--letter-spacing: -0.04em;
+
+  --text-h2: 24px;
+  --text-h2--line-height: 1.1;
+  --text-h2--letter-spacing: -0.04em;
+
+  --text-h3: 20px;
+  --text-h3--line-height: 1.1;
+  --text-h3--letter-spacing: -0.04em;
+
+  --text-h4: 16px;
+  --text-h4--line-height: 1.1;
+  --text-h4--letter-spacing: -0.02em;
+
+  --text-h5: 14px;
+  --text-h5--line-height: 1.1;
+  --text-h5--letter-spacing: -0.02em;
+
+  --text-h6: 12px;
+  --text-h6--line-height: 1.1;
+  --text-h6--letter-spacing: -0.02em;
+
+  /* Body */
+  --text-p1: 14px;
+  --text-p1--line-height: 1.4;
+  --text-p1--letter-spacing: -0.02em;
+
+  --text-p1-medium: 14px;
+  --text-p1-medium--line-height: 1.6;
+  --text-p1-medium--letter-spacing: -0.02em;
+
+  --text-p2: 12px;
+  --text-p2--line-height: 1.4;
+  --text-p2--letter-spacing: -0.02em;
+
+  --text-p3: 12px;
+  --text-p3--line-height: 1.4;
+  --text-p3--letter-spacing: 0;
+
+  --text-p4: 10px;
+  --text-p4--line-height: 1.4;
+  --text-p4--letter-spacing: 0;
+
+  --text-caption: 10px;
+  --text-caption--line-height: 1.4;
+  --text-caption--letter-spacing: 0;
+
+  /* ─── Colors ─────────────────────────────────────────────────────────────── */
+
+  /* Base */
+  --color-black: #000000;
+  --color-white: #ffffff;
+
+  /* Neutral text hierarchy (from screens) */
+  --color-text-primary: #ffffff; /* pure white — headings, active labels */
+  --color-text-secondary: #d6d6d6; /* secondary labels, placeholder values */
+  --color-text-tertiary: #e5e5e5; /* input placeholder text */
+  --color-text-disabled: rgba(255, 255, 255, 0.44); /* dimmed / placeholder */
+  --color-text-muted: rgba(255, 255, 255, 0.64); /* opacity-64 labels e.g. "Add", "Unlimited" */
+
+  /* Surfaces / backgrounds */
+  --color-surface-base: #000000; /* page background */
+  --color-surface-elevated: rgba(255, 255, 255, 0.12); /* cards, inputs, pills, tab bg */
+  --color-surface-pressed: rgba(255, 255, 255, 0.08); /* inner tint on active surface */
+  --color-surface-overlay: rgba(0, 0, 0, 0.44); /* backdrop blur overlay */
+  --color-surface-overlay-heavy: rgba(0, 0, 0, 0.64); /* heavier bg blur */
+
+  /* Borders */
+  --color-border-default: rgba(255, 255, 255, 0.12); /* standard card/input border */
+  --color-border-subtle: rgba(255, 255, 255, 0.08); /* inner dividers, secondary borders */
+  --color-border-strong: rgba(255, 255, 255, 0.24); /* toggle track, prominent borders */
+
+  /* Primary action (white fill) */
+  --color-btn-primary-bg: #ffffff;
+  --color-btn-primary-text: #000000;
+
+  /* Secondary action (glass) */
+  --color-btn-secondary-bg: rgba(255, 255, 255, 0.12);
+  --color-btn-secondary-text: #d6d6d6;
+
+  /* Segment / tab control */
+  --color-segment-active-bg: #f5f5f5; /* active pill in segmented control */
+  --color-segment-active-text: #000000;
+  --color-segment-idle-text: #ffffff;
+
+  /* ─── Border Radius ──────────────────────────────────────────────────────── */
+  /* All multiples of 4 (with 2px allowed minimum) */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px; /* pill buttons, toggles */
+
+  /* ─── Spacing (4px grid) ─────────────────────────────────────────────────── */
+  /* Tailwind's default spacing scale is already 4px-based (space-1 = 4px).    */
+  /* Custom semantic aliases for Tunyt-specific patterns:                        */
+  --spacing-page-x: 16px; /* standard horizontal page padding */
+  --spacing-card-p: 12px; /* card internal padding */
+  --spacing-input-p: 12px; /* input padding */
+
+  /* ─── Blur / Effects ─────────────────────────────────────────────────────── */
+  --blur-glass: 13.5px; /* backdrop blur on pill chips and overlays */
+  --blur-glow: 80px; /* background gradient glow blobs */
+}
+
+@font-face {
+  font-family: "OpenSansHebrewCondensed";
+  src: url("/fonts/OpenSansHebrewCondensed-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mosvita";
+  src: url("/framer/fonts/NU8w9ZcnuD7mqdjSxOO88ILrU8.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ─── Dashboard responsive layout ──────────────────────────────────────── */
+/* Default-hide sidebar on mobile before JS hydrates. JS inline style takes  */
+/* over after hydration; CSS transition applies to those JS-driven changes.  */
+@media (max-width: 767px) {
+  .dash-sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.22s ease-out;
+  }
+  /* Override the JS-set inline marginLeft on mobile */
+  .dash-content {
+    margin-left: 0;
+  }
+}
+
+/* ─── Hide all scrollbars globally ──────────────────────────────────────── */
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE / Edge */
+}
+*::-webkit-scrollbar {
+  display: none; /* Chrome / Safari / WebKit */
+}
+
+@keyframes nav-text-in {
+  from {
+    opacity: 0;
+    transform: translateY(2px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes nav-text-out {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-2px) scale(0.96);
+  }
+}
+
+/* ─── Button press feedback ─────────────────────────────────────────────── */
+/* Instant scale-down on every button press so every tap/click feels physical */
+button:active,
+a[role="button"]:active {
+  transform: scale(0.97);
+  transition: transform 0.08s ease-out;
+}
+
+/* ─── Shake animation ────────────────────────────────────────────────────── */
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-6px);
+  }
+  40% {
+    transform: translateX(6px);
+  }
+  60% {
+    transform: translateX(-4px);
+  }
+  80% {
+    transform: translateX(4px);
+  }
+}
+
+.animate-shake {
+  animation: shake 0.35s ease-in-out;
+}
+
+/* Default page background ── Without this the browser's white shows beneath
+   the per-page wrappers (and behind the transparent global footer). */
+html,
+body {
+  background: var(--color-surface-base);
+}
+
+/* ─── Splash Screen Animations ───────────────────────────────────────────── */
+
+/* Logo: rises up and fades in from slight scale */
+@keyframes splash-logo-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.72) translateY(8px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.04) translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Tagline / wordmark: fades in from below */
+@keyframes splash-tagline-in {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ambient orb top-left drifts in */
+@keyframes splash-orb-tl-in {
+  0% {
+    opacity: 0;
+    transform: translate(-24px, -24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+/* Ambient orb bottom-right drifts in */
+@keyframes splash-orb-br-in {
+  0% {
+    opacity: 0;
+    transform: translate(24px, 24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+/* Full screen exit: fade + very subtle scale-up push */
+@keyframes splash-exit-anim {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.04);
+    pointer-events: none;
+  }
+}
+
+.splash-logo-enter {
+  animation: splash-logo-in 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  animation-delay: 0.1s;
+  opacity: 0;
+}
+
+.splash-tagline-enter {
+  animation: splash-tagline-in 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    forwards;
+  animation-delay: 0.45s;
+  opacity: 0;
+}
+
+.splash-orb-tl {
+  animation: splash-orb-tl-in 1s ease-out forwards;
+}
+
+.splash-orb-br {
+  animation: splash-orb-br-in 1s ease-out forwards;
+  animation-delay: 0.1s;
+}
+
+.splash-exit {
+  animation: splash-exit-anim 0.45s cubic-bezier(0.4, 0, 1, 1) forwards;
+  pointer-events: none;
+}
+
+/* Hide splash screen by default on normal browsers to prevent flash */
+.splash-pwa-only {
+  display: none;
+}
+
+@media (display-mode: standalone) {
+  .splash-pwa-only {
+    display: flex;
+  }
+}
+
+/* pulse page */
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes todayDotPulse {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.35;
+    }
+  }
+}
+
+.animate-today-pulse {
+  animation: todayDotPulse 1.6s ease-in-out infinite;
+}
+
+.date-field::-webkit-datetime-edit {
+  padding: 0;
+}
+.date-field::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  filter: invert(1);
+}
+.date-field {
+  cursor: text;
+}
