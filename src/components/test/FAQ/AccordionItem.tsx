@@ -18,7 +18,7 @@ export default function AccordionItem({
         className="flex w-full items-center justify-between py-6 text-left outline-none"
       >
         <span
-          className={`font-geist text-[20px] font-medium leading-[2] tracking-[-0.4px] transition-colors duration-200 ${
+          className={`font-geist text-[16px] md:text-[20px] font-medium leading-[2] tracking-[-0.4px] transition-colors duration-200 ${
             isOpen
               ? "text-[rgba(255,255,255,0.84)]"
               : "text-[rgba(255,255,255,0.44)] hover:text-white/80"

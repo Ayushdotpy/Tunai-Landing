@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function SectionHeading() {
   return (
-    <div className="relative z-20 mx-auto flex w-full max-w-[1280px] flex-col items-start justify-start px-6 text-left">
+    <div className="relative z-20 mx-auto flex w-full max-w-[1280px] flex-col items-start justify-start px-4 md:px-6 text-left">
       <motion.div 
         className="relative"
         initial={{ opacity: 0, y: 40, filter: "blur(8px)" }}

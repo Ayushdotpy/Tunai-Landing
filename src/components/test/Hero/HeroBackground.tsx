@@ -45,7 +45,7 @@ export default function HeroBackground() {
   return (
     <div className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center overflow-hidden">
       {/* Container to match Figma's exact positioning context if needed, but for now we'll just absolute position them relative to inset-0 */}
-      <div className="relative h-[1024px] w-[1216px] shrink-0">
+      <div className="relative h-[1024px] w-[1216px] shrink-0 scale-[0.5] md:scale-[0.75] lg:scale-100">
         {/* Concentric Ellipses */}
         {ellipses.map((ellipse, index) => (
           <div

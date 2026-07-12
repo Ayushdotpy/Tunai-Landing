@@ -31,12 +31,12 @@ export default function CategoryCards() {
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
       variants={containerVariants}
-      className="mx-auto mt-20 grid w-full max-w-[1280px] grid-cols-1 gap-6 px-6 md:grid-cols-3"
+      className="mx-auto mt-12 md:mt-20 grid w-full max-w-[1280px] grid-cols-1 gap-6 px-4 md:px-6 md:grid-cols-3"
     >
       {/* ---------------- CARD 1: BEFORE ---------------- */}
       <motion.div
         variants={cardVariants}
-        className="group relative mx-auto flex w-full max-w-[397px] h-[407px] flex-col overflow-hidden rounded-[44px] transition-all duration-500 ease-out hover:-translate-y-[6px] hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(255,255,255,0.08)]"
+        className="group relative mx-auto flex w-full max-w-[397px] h-[340px] md:h-[407px] flex-col overflow-hidden rounded-[32px] md:rounded-[44px] transition-all duration-500 ease-out hover:-translate-y-[6px] hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(255,255,255,0.08)]"
         style={{
           background:
             "radial-gradient(135.38% 51.98% at 50.13% 23.83%, #000 0%, #0F0F0F 100%)",
@@ -69,7 +69,7 @@ export default function CategoryCards() {
             />
           </motion.div>
         </div>
-        <div className="absolute bottom-0 left-0 z-20 flex w-full flex-col items-start gap-1 pb-[33px] pl-[42px] pr-[53px] pt-8">
+        <div className="absolute bottom-0 left-0 z-20 flex w-full flex-col items-start gap-1 pb-[24px] md:pb-[33px] pl-[24px] md:pl-[42px] pr-[24px] md:pr-[53px] pt-8">
           <span
             className="self-stretch font-geist text-[12px] font-medium leading-none tracking-[-0.24px] text-[rgba(255,255,255,0.44)]"
             style={{ fontFeatureSettings: "'liga' off, 'clig' off" }}
@@ -77,13 +77,13 @@ export default function CategoryCards() {
             Before
           </span>
           <h3
-            className="self-stretch font-geist text-[28px] font-semibold leading-[1.4] tracking-[-0.56px] text-white"
+            className="self-stretch font-geist text-[22px] md:text-[28px] font-semibold leading-[1.4] tracking-[-0.56px] text-white"
             style={{ fontFeatureSettings: "'liga' off, 'clig' off" }}
           >
             Saves You Time
           </h3>
           <p
-            className="self-stretch font-geist text-[16px] font-medium leading-[1.4] tracking-[-0.32px] text-white opacity-[0.44]"
+            className="self-stretch font-geist text-[14px] md:text-[16px] font-medium leading-[1.4] tracking-[-0.32px] text-white opacity-[0.44]"
             style={{ fontFeatureSettings: "'liga' off, 'clig' off" }}
           >
             Automates setup, customises pages, and builds schedules in minutes
@@ -94,7 +94,7 @@ export default function CategoryCards() {
       {/* ---------------- CARD 2: DURING ---------------- */}
       <motion.div
         variants={cardVariants}
-        className="group relative mx-auto flex w-full max-w-[397px] h-[407px] flex-col overflow-hidden rounded-[44px] transition-all duration-500 ease-out hover:-translate-y-[6px] hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(255,255,255,0.08)]"
+        className="group relative mx-auto flex w-full max-w-[397px] h-[340px] md:h-[407px] flex-col overflow-hidden rounded-[32px] md:rounded-[44px] transition-all duration-500 ease-out hover:-translate-y-[6px] hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(255,255,255,0.08)]"
         style={{
           background:
             "radial-gradient(135.38% 51.98% at 50.13% 23.83%, #000 0%, #0F0F0F 100%)",
@@ -121,13 +121,13 @@ export default function CategoryCards() {
           </motion.div>
         </div>
         <div
-          className="pointer-events-none absolute bottom-0 left-0 z-10 h-[286px] w-[397px]"
+          className="pointer-events-none absolute bottom-0 left-0 z-10 h-[286px] w-full"
           style={{
             background:
               "radial-gradient(142.84% 49.78% at 49.87% 0%, rgba(0, 0, 0, 0.00) 24.57%, #000 100%)",
           }}
         />
-        <div className="absolute bottom-0 left-0 z-20 flex w-full flex-col items-start gap-1 pb-[33px] pl-[42px] pr-[53px] pt-8">
+        <div className="absolute bottom-0 left-0 z-20 flex w-full flex-col items-start gap-1 pb-[24px] md:pb-[33px] pl-[24px] md:pl-[42px] pr-[24px] md:pr-[53px] pt-8">
           <span
             className="self-stretch font-geist text-[12px] font-medium leading-none tracking-[-0.24px] text-[rgba(255,255,255,0.44)]"
             style={{ fontFeatureSettings: "'liga' off, 'clig' off" }}
@@ -135,13 +135,13 @@ export default function CategoryCards() {
             During
           </span>
           <h3
-            className="self-stretch font-geist text-[28px] font-semibold leading-[1.4] tracking-[-0.56px] text-white"
+            className="self-stretch font-geist text-[22px] md:text-[28px] font-semibold leading-[1.4] tracking-[-0.56px] text-white"
             style={{ fontFeatureSettings: "'liga' off, 'clig' off" }}
           >
             Watches Your Back
           </h3>
           <p
-            className="self-stretch font-geist text-[16px] font-medium leading-[1.4] tracking-[-0.32px] text-white opacity-[0.44]"
+            className="self-stretch font-geist text-[14px] md:text-[16px] font-medium leading-[1.4] tracking-[-0.32px] text-white opacity-[0.44]"
             style={{ fontFeatureSettings: "'liga' off, 'clig' off" }}
           >
             Monitors registrations, attendance, and performance so nothing slips
@@ -153,7 +153,7 @@ export default function CategoryCards() {
       {/* ---------------- CARD 3: AFTER ---------------- */}
       <motion.div
         variants={cardVariants}
-        className="group relative mx-auto flex w-full max-w-[397px] h-[407px] flex-col overflow-hidden rounded-[44px] transition-all duration-500 ease-out hover:-translate-y-[6px] hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(255,255,255,0.08)]"
+        className="group relative mx-auto flex w-full max-w-[397px] h-[340px] md:h-[407px] flex-col overflow-hidden rounded-[32px] md:rounded-[44px] transition-all duration-500 ease-out hover:-translate-y-[6px] hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(255,255,255,0.08)]"
         style={{
           background:
             "radial-gradient(135.38% 51.98% at 50.13% 23.83%, #000 0%, #0F0F0F 100%)",
@@ -186,7 +186,7 @@ export default function CategoryCards() {
             />
           </motion.div>
         </div>
-        <div className="absolute bottom-0 left-0 z-20 flex w-full flex-col items-start gap-1 pb-[33px] pl-[42px] pr-[53px] pt-8">
+        <div className="absolute bottom-0 left-0 z-20 flex w-full flex-col items-start gap-1 pb-[24px] md:pb-[33px] pl-[24px] md:pl-[42px] pr-[24px] md:pr-[53px] pt-8">
           <span
             className="self-stretch font-geist text-[12px] font-medium leading-none tracking-[-0.24px] text-[rgba(255,255,255,0.44)]"
             style={{ fontFeatureSettings: "'liga' off, 'clig' off" }}
@@ -194,13 +194,13 @@ export default function CategoryCards() {
             After
           </span>
           <h3
-            className="self-stretch font-geist text-[28px] font-semibold leading-[1.4] tracking-[-0.56px] text-white"
+            className="self-stretch font-geist text-[22px] md:text-[28px] font-semibold leading-[1.4] tracking-[-0.56px] text-white"
             style={{ fontFeatureSettings: "'liga' off, 'clig' off" }}
           >
             Helps You Improve
           </h3>
           <p
-            className="self-stretch font-geist text-[16px] font-medium leading-[1.4] tracking-[-0.32px] text-white opacity-[0.44]"
+            className="self-stretch font-geist text-[14px] md:text-[16px] font-medium leading-[1.4] tracking-[-0.32px] text-white opacity-[0.44]"
             style={{ fontFeatureSettings: "'liga' off, 'clig' off" }}
           >
             Turns event data into clear insights, tells you what worked and what

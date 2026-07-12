@@ -212,7 +212,7 @@ export default function WhyTunyt() {
   return (
     <section className="relative w-full bg-black">
       {/* 1. Normal document flow heading */}
-      <div className="relative z-10 w-full">
+      <div className="relative z-10 w-full ">
         <SectionHeading />
       </div>
 
@@ -232,7 +232,7 @@ export default function WhyTunyt() {
                 onClick={() =>
                   scrollToFeature(Math.max(0, currentFeatureRef.current - 1))
                 }
-                className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border border-white/10 bg-black/60 text-white backdrop-blur-md transition-all hover:bg-white/10 active:scale-95"
+                className="flex h-10 w-10 md:h-12 md:w-12 cursor-pointer items-center justify-center rounded-full border border-white/10 bg-black/60 text-white backdrop-blur-md transition-all hover:bg-white/10 active:scale-95"
               >
                 <svg
                   width="24"
@@ -245,7 +245,7 @@ export default function WhyTunyt() {
                   <path d="M15 18l-6-6 6-6" />
                 </svg>
               </button>
-              <div className="relative flex h-14 w-[180px] items-center justify-center overflow-hidden rounded-[30px] border border-white/10 bg-black/60 px-8 backdrop-blur-md">
+              <div className="relative flex h-12 md:h-14 w-[140px] md:w-[180px] items-center justify-center overflow-hidden rounded-[30px] border border-white/10 bg-black/60 px-6 md:px-8 backdrop-blur-md">
                 <motion.div
                   style={{ opacity: p1_op, y: p1_y }}
                   className="absolute font-medium text-white"
@@ -275,7 +275,7 @@ export default function WhyTunyt() {
                 onClick={() =>
                   scrollToFeature(Math.min(3, currentFeatureRef.current + 1))
                 }
-                className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border border-white/10 bg-black/60 text-white backdrop-blur-md transition-all hover:bg-white/10 active:scale-95"
+                className="flex h-10 w-10 md:h-12 md:w-12 cursor-pointer items-center justify-center rounded-full border border-white/10 bg-black/60 text-white backdrop-blur-md transition-all hover:bg-white/10 active:scale-95"
               >
                 <svg
                   width="24"

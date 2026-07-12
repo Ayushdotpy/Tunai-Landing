@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function CTAContent() {
   return (
-    <div className="relative z-20 flex w-full flex-col items-center justify-center text-center mt-[-80px] md:mt-[-120px]">
+    <div className="relative z-20 flex w-full flex-col items-center justify-center text-center mt-[-40px] md:mt-[-80px] lg:mt-[-120px]">
       <div className="relative w-full max-w-[800px] mx-auto">
         {/* Glowing Background Text */}
         <h2

@@ -35,7 +35,7 @@ export default function CategoryCard({
   borderColor = "border-white/[0.08]",
   borderRadius = "rounded-[32px]",
   customBackground,
-  imageSize = 140, // was hardcoded 240 — that's the main overflow culprit
+  imageSize = 140, 
   imageStyle = {},
 }: CategoryCardProps) {
   const isHorizontal = layout === "horizontal";

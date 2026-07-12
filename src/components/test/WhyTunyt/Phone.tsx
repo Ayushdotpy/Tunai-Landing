@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, MotionValue, useTransform } from "framer-motion";
-import { type Feature, TIMELINE } from "./WhyTunyt";
+import { TIMELINE, type Feature } from "./WhyTunyt";
 
 interface PhoneProps {
   features: Feature[];
@@ -31,7 +31,7 @@ export default function Phone({ features, progress }: PhoneProps) {
 
   return (
     <div className="pointer-events-none absolute inset-0 z-40 overflow-hidden">
-      <div className="relative mx-auto h-full w-full max-w-[1440px]">
+      <div className="relative mx-auto h-full w-full max-w-[1440px] scale-[0.55] md:scale-[0.75] lg:scale-100 origin-center">
         <motion.div
           style={{
             position: "absolute",

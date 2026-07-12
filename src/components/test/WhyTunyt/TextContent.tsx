@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, MotionValue, useTransform } from "framer-motion";
-import { type Feature, TIMELINE } from "./WhyTunyt";
+import { TIMELINE, type Feature } from "./WhyTunyt";
 
 interface TextContentProps {
   features: Feature[];
@@ -77,7 +77,7 @@ function TextItem({
       )}`}
       style={{ opacity, y, filter: useTransform(blur, (v) => `blur(${v}px)`) }}
     >
-      <h3 className="font-mosvita text-[32px] font-semibold leading-[1.3] tracking-[-0.32px] text-white">
+      <h3 className="font-mosvita text-[24px] md:text-[32px] font-semibold leading-[1.3] tracking-[-0.32px] text-white">
         {feature.title}
       </h3>
       <p className="font-sans text-[16px] font-medium leading-[1.6] tracking-[-0.32px] text-[#707070]">

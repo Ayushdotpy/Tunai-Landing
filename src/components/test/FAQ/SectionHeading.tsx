@@ -1,6 +1,6 @@
 export default function SectionHeading() {
   return (
-    <div className="flex w-full flex-col items-start pt-12 md:pl-[60px] lg:pl-[120px] lg:pt-[149px] md:h-full md:justify-between">
+    <div className="flex w-full flex-col items-start px-4 pt-12 md:px-0 md:pl-[60px] lg:pl-[120px] lg:pt-[149px] md:h-full md:justify-between">
       <h2
         className="w-full max-w-[387px] font-mosvita text-[40px] font-bold leading-[1.1] tracking-[-1.28px] text-white md:text-[64px] lg:text-[67.899px] lg:tracking-[-1.358px]"
         style={{ fontFeatureSettings: "'liga' off, 'clig' off" }}
