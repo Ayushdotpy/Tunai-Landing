@@ -6,8 +6,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function FloatingIcons() {
   const { scrollY } = useScroll();
-  
-  // Dramatically randomized parallax scrolling offsets. 
+
+  // Dramatically randomized parallax scrolling offsets.
   // All icons move up when scrolling down, but at wildly different speeds for a 3D effect.
   const y1 = useTransform(scrollY, [0, 1000], [0, -400]);
   const y2 = useTransform(scrollY, [0, 1000], [0, -150]);
@@ -34,14 +34,14 @@ export default function FloatingIcons() {
           }}
         >
           <Image
-            src="/test/icons/People1.png"
+            src="/test/icons/people1.png"
             alt="People"
             fill
             className="object-contain"
             style={{ opacity: 0.8, filter: "blur(8.4px)" }}
           />
           <Image
-            src="/test/icons/People1.png"
+            src="/test/icons/people1.png"
             alt="People Layer 2"
             fill
             className="object-contain"
@@ -93,14 +93,14 @@ export default function FloatingIcons() {
           }}
         >
           <Image
-            src="/test/icons/Analytics.png"
+            src="/test/icons/analytics.png"
             alt="Analytics"
             fill
             className="object-contain"
             style={{ filter: "blur(1.62px)" }}
           />
           <Image
-            src="/test/icons/Analytics.png"
+            src="/test/icons/analytics.png"
             alt="Analytics Layer 2"
             fill
             className="object-contain"
@@ -118,14 +118,14 @@ export default function FloatingIcons() {
           }}
         >
           <Image
-            src="/test/icons/Trophy.png"
+            src="/test/icons/trophy.png"
             alt="Trophy"
             fill
             className="object-contain"
             style={{ opacity: 0.7, filter: "blur(4.16px)" }}
           />
           <Image
-            src="/test/icons/Trophy.png"
+            src="/test/icons/trophy.png"
             alt="Trophy Layer 2"
             fill
             className="object-contain"
@@ -143,14 +143,14 @@ export default function FloatingIcons() {
           }}
         >
           <Image
-            src="/test/icons/Calendar.png"
+            src="/test/icons/calendar.png"
             alt="Calendar"
             fill
             className="object-contain"
             style={{ filter: "blur(3.92px)" }}
           />
           <Image
-            src="/test/icons/Calendar.png"
+            src="/test/icons/calendar.png"
             alt="Calendar Layer 2"
             fill
             className="object-contain"
@@ -167,14 +167,14 @@ export default function FloatingIcons() {
           }}
         >
           <Image
-            src="/test/icons/Hourglass.png"
+            src="/test/icons/hourglass.png"
             alt="Hourglass"
             fill
             className="object-contain"
             style={{ filter: "blur(2.5px)" }}
           />
           <Image
-            src="/test/icons/Hourglass.png"
+            src="/test/icons/hourglass.png"
             alt="Hourglass Layer 2"
             fill
             className="object-contain"
@@ -192,14 +192,14 @@ export default function FloatingIcons() {
           }}
         >
           <Image
-            src="/test/icons/Money.png"
+            src="/test/icons/money.png"
             alt="Money"
             fill
             className="object-contain"
             style={{ opacity: 0.8, filter: "blur(8.475px)" }}
           />
           <Image
-            src="/test/icons/Money.png"
+            src="/test/icons/money.png"
             alt="Money Layer 2"
             fill
             className="object-contain"
@@ -217,13 +217,13 @@ export default function FloatingIcons() {
           }}
         >
           <Image
-            src="/test/icons/Toggle.png"
+            src="/test/icons/toggle.png"
             alt="Toggle"
             fill
             className="object-contain"
           />
           <Image
-            src="/test/icons/Toggle.png"
+            src="/test/icons/toggle.png"
             alt="Toggle Layer 2"
             fill
             className="object-contain"
