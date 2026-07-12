@@ -70,11 +70,12 @@ export default function WhyTunyt() {
     isAnimatingRef.current = true;
     currentFeatureRef.current = targetIndex;
 
-    const absoluteTop = containerRef.current.getBoundingClientRect().top + window.scrollY;
+    const absoluteTop =
+      containerRef.current.getBoundingClientRect().top + window.scrollY;
     const targetScroll = absoluteTop + targetIndex * window.innerHeight;
     window.scrollTo({
       top: targetScroll,
-      behavior: "smooth"
+      behavior: "smooth",
     });
 
     setTimeout(() => {
@@ -96,7 +97,7 @@ export default function WhyTunyt() {
       if (isInside) {
         const direction = e.deltaY > 0 ? 1 : -1;
         const progress = -rect.top / (rect.height - window.innerHeight);
-        
+
         let targetIndex = currentFeatureRef.current + direction;
 
         // Special case: returning from below/above
@@ -133,7 +134,7 @@ export default function WhyTunyt() {
         if (Math.abs(diffY) > 30) {
           const direction = diffY > 0 ? 1 : -1;
           const progress = -rect.top / (rect.height - window.innerHeight);
-          
+
           let targetIndex = currentFeatureRef.current + direction;
 
           // Special case: returning from below/above
@@ -183,11 +184,27 @@ export default function WhyTunyt() {
   const p1_op = useTransform(smoothProgress, [0, 0.25], [1, 0]);
   const p1_y = useTransform(smoothProgress, [0, 0.25], ["0px", "-20px"]);
 
-  const p2_op = useTransform(smoothProgress, [0.15, 0.25, 0.35, 0.58], [0, 1, 1, 0]);
-  const p2_y = useTransform(smoothProgress, [0.15, 0.25, 0.35, 0.58], ["20px", "0px", "0px", "-20px"]);
+  const p2_op = useTransform(
+    smoothProgress,
+    [0.15, 0.25, 0.35, 0.58],
+    [0, 1, 1, 0],
+  );
+  const p2_y = useTransform(
+    smoothProgress,
+    [0.15, 0.25, 0.35, 0.58],
+    ["20px", "0px", "0px", "-20px"],
+  );
 
-  const p3_op = useTransform(smoothProgress, [0.48, 0.58, 0.68, 0.91], [0, 1, 1, 0]);
-  const p3_y = useTransform(smoothProgress, [0.48, 0.58, 0.68, 0.91], ["20px", "0px", "0px", "-20px"]);
+  const p3_op = useTransform(
+    smoothProgress,
+    [0.48, 0.58, 0.68, 0.91],
+    [0, 1, 1, 0],
+  );
+  const p3_y = useTransform(
+    smoothProgress,
+    [0.48, 0.58, 0.68, 0.91],
+    ["20px", "0px", "0px", "-20px"],
+  );
 
   const p4_op = useTransform(smoothProgress, [0.81, 0.91], [0, 1]);
   const p4_y = useTransform(smoothProgress, [0.81, 0.91], ["20px", "0px"]);
@@ -195,7 +212,7 @@ export default function WhyTunyt() {
   return (
     <section className="relative w-full bg-black">
       {/* 1. Normal document flow heading */}
-      <div className="relative z-10 w-full pt-12">
+      <div className="relative z-10 w-full">
         <SectionHeading />
       </div>
 
@@ -204,7 +221,7 @@ export default function WhyTunyt() {
         <div className="sticky top-0 flex h-screen w-full items-center justify-center overflow-hidden">
           {/* Overlapping, continuous text transitions */}
           <TextContent features={features} progress={smoothProgress} />
-          
+
           {/* Constantly floating phone with crossfading screens */}
           <Phone features={features} progress={smoothProgress} />
 
@@ -212,22 +229,64 @@ export default function WhyTunyt() {
           <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-50">
             <div className="flex items-center gap-4">
               <button
-                onClick={() => scrollToFeature(Math.max(0, currentFeatureRef.current - 1))}
+                onClick={() =>
+                  scrollToFeature(Math.max(0, currentFeatureRef.current - 1))
+                }
                 className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border border-white/10 bg-black/60 text-white backdrop-blur-md transition-all hover:bg-white/10 active:scale-95"
               >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M15 18l-6-6 6-6" /></svg>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                >
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
               </button>
               <div className="relative flex h-14 w-[180px] items-center justify-center overflow-hidden rounded-[30px] border border-white/10 bg-black/60 px-8 backdrop-blur-md">
-                <motion.div style={{ opacity: p1_op, y: p1_y }} className="absolute font-medium text-white">Revenue</motion.div>
-                <motion.div style={{ opacity: p2_op, y: p2_y }} className="absolute font-medium text-white">Analytics</motion.div>
-                <motion.div style={{ opacity: p3_op, y: p3_y }} className="absolute font-medium text-white">Audience</motion.div>
-                <motion.div style={{ opacity: p4_op, y: p4_y }} className="absolute font-medium text-white">Agentic AI</motion.div>
+                <motion.div
+                  style={{ opacity: p1_op, y: p1_y }}
+                  className="absolute font-medium text-white"
+                >
+                  Revenue
+                </motion.div>
+                <motion.div
+                  style={{ opacity: p2_op, y: p2_y }}
+                  className="absolute font-medium text-white"
+                >
+                  Analytics
+                </motion.div>
+                <motion.div
+                  style={{ opacity: p3_op, y: p3_y }}
+                  className="absolute font-medium text-white"
+                >
+                  Audience
+                </motion.div>
+                <motion.div
+                  style={{ opacity: p4_op, y: p4_y }}
+                  className="absolute font-medium text-white"
+                >
+                  Agentic AI
+                </motion.div>
               </div>
               <button
-                onClick={() => scrollToFeature(Math.min(3, currentFeatureRef.current + 1))}
+                onClick={() =>
+                  scrollToFeature(Math.min(3, currentFeatureRef.current + 1))
+                }
                 className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border border-white/10 bg-black/60 text-white backdrop-blur-md transition-all hover:bg-white/10 active:scale-95"
               >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M9 18l6-6-6-6" /></svg>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                >
+                  <path d="M9 18l6-6-6-6" />
+                </svg>
               </button>
             </div>
           </div>
