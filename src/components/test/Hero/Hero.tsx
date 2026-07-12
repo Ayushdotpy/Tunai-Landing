@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section className="relative h-[658px] w-full overflow-hidden bg-black">
       <Image 
-        src="/tunyt-wordmark.png" 
+        src="/logo.svg" 
         alt="Tunyt Logo" 
         width={71} 
         height={34} 
