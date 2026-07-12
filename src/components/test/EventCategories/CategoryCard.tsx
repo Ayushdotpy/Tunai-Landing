@@ -1,5 +1,5 @@
-import React from "react";
 import Image from "next/image";
+import type React from "react";
 
 export interface CategoryCardProps {
   subtitle?: string;
@@ -42,33 +42,27 @@ export default function CategoryCard({
 
   return (
     <div
-      className={`relative flex overflow-hidden border transition-transform duration-300 hover:scale-[1.02] ${
-        isHorizontal ? "flex-row items-center pl-6" : "flex-col"
-      } ${borderRadius} ${borderColor} ${className}`}
-      style={{
-        background:
-          bgGradient ||
-          `radial-gradient(120% 120% at 50% 0%, ${glowColor}22 0%, #050505 100%)`,
-        boxShadow: `0 0 40px -10px ${glowColor}15`,
-      }}
+      className={`relative isolate flex transition-transform duration-300 hover:scale-[1.02] overflow-hidden ${borderRadius} border ${borderColor} ${
+        isHorizontal ? "flex-row" : "flex-col"
+      } ${className}`}
     >
-      {customBackground}
-
+      {/* Background Layer */}
       <div
-        className={`pointer-events-none absolute h-[60%] w-[80%] rounded-full blur-[80px] ${
-          isHorizontal
-            ? "left-[20%] top-1/2 -translate-y-1/2 -translate-x-1/2"
-            : "left-1/2 top-[30%] -translate-x-1/2 -translate-y-1/2"
-        }`}
-        style={{ backgroundColor: `${glowColor}40` }}
-      />
+        className={`absolute inset-0 z-[-1]`}
+        style={{
+          background:
+            bgGradient ||
+            `radial-gradient(120% 120% at 50% 0%, ${glowColor}22 0%, #050505 100%)`,
+          boxShadow: `0 0 40px -10px ${glowColor}15`,
+        }}
+      >
+        {customBackground}
+
+
+      </div>
 
       {/* Image Container — min-h-0 lets it actually shrink instead of forcing overflow */}
-      <div
-        className={`relative z-0 flex min-h-0 items-center justify-center ${
-          isHorizontal ? "w-[100px] py-4" : "flex-1 px-6 pt-6 pb-2"
-        }`}
-      >
+      <div className={`${!isHorizontal ? "w-full" : ""}`}>
         {imageSrc ? (
           <Image
             src={imageSrc}
@@ -76,7 +70,7 @@ export default function CategoryCard({
             width={imageSize}
             height={imageSize}
             unoptimized={true}
-            className={`relative z-10 object-contain drop-shadow-2xl ${imageClassName}`}
+            className={imageClassName}
             style={imageStyle}
           />
         ) : (
@@ -88,8 +82,8 @@ export default function CategoryCard({
 
       {/* Text Content */}
       <div
-        className={`relative flex flex-col shrink-0 ${
-          isHorizontal ? "flex-1 py-6 pr-6" : "w-full px-8 pb-6"
+        className={`flex flex-col shrink-0 ${
+          isHorizontal ? "flex-1" : "w-full"
         } ${align === "right" ? "items-end text-right" : "items-start text-left"}`}
       >
         {subtitle && (

@@ -1,76 +1,78 @@
+import React from "react";
+import Image from "next/image";
+
 export default function HeroBackground() {
+  // We'll create 5 concentric ellipses.
+  // We can adjust these sizes based on the Figma exact dimensions later.
+  const ellipses = [
+    {
+      width: "382px",
+      height: "400px",
+      border: "2px solid #FFF",
+      opacity: 0.02,
+      borderRadius: "400px",
+    },
+    {
+      width: "532px",
+      height: "558px",
+      border: "2px solid #FFF",
+      opacity: 0.02,
+      borderRadius: "558px",
+    },
+    {
+      width: "748px",
+      height: "784px",
+      border: "2px solid #FFF",
+      opacity: 0.02,
+      borderRadius: "784px",
+    },
+    {
+      width: "944px",
+      height: "988px",
+      border: "2px solid #FFF",
+      opacity: 0.02,
+      borderRadius: "988px",
+    },
+    {
+      width: "1100px",
+      height: "1152px",
+      border: "2px solid #FFF",
+      opacity: 0.02,
+      borderRadius: "1152px",
+    },
+  ];
+
   return (
-    <>
-      <div className="absolute inset-0 bg-black" />
-
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(120,50,255,0.12),transparent_65%)]" />
-
-      <svg
-        viewBox="0 0 1350 658"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className="absolute left-1/2 top-1/2 h-[61vh] w-auto -translate-x-1/2 -translate-y-1/2 overflow-visible"
-      >
-        <g opacity="0.4" filter="url(#filter0_f_9_71)">
-          <path
-            d="M193.784 169H1155.78L795.248 243.034L689.779 692.679L583.369 243.034L193.784 169Z"
-            fill="url(#paint0_linear_9_71)"
+    <div className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center overflow-hidden">
+      {/* Container to match Figma's exact positioning context if needed, but for now we'll just absolute position them relative to inset-0 */}
+      <div className="relative h-[1024px] w-[1216px] shrink-0">
+        {/* Concentric Ellipses */}
+        {ellipses.map((ellipse, index) => (
+          <div
+            key={index}
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            style={{
+              width: ellipse.width,
+              height: ellipse.height,
+              border: ellipse.border || "1px solid rgba(255, 255, 255, 0.1)",
+              opacity: ellipse.opacity,
+              borderRadius: ellipse.borderRadius || "50%",
+            }}
           />
-          <path
-            d="M193.784 169H1155.78L795.248 243.034L689.779 692.679L583.369 243.034L193.784 169Z"
-            fill="url(#paint1_linear_9_71)"
+        ))}
+
+        {/* Vector Background */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <Image
+            src="/test/icons/BGvector.svg"
+            alt="Background Vector"
+            width={1350}
+            height={658}
+            className="pointer-events-none"
+            priority
           />
-        </g>
-        <defs>
-          <filter
-            id="filter0_f_9_71"
-            x="0"
-            y="-24.7839"
-            width="1349.57"
-            height="911.247"
-            filterUnits="userSpaceOnUse"
-            colorInterpolationFilters="sRGB"
-          >
-            <feFlood floodOpacity="0" result="BackgroundImageFix" />
-            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-            <feGaussianBlur stdDeviation="96.8921" result="effect1_foregroundBlur_9_71" />
-          </filter>
-          <linearGradient
-            id="paint0_linear_9_71"
-            x1="193.784"
-            y1="370.859"
-            x2="1155.78"
-            y2="370.859"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop offset="0.278846" stopColor="#FFE348" />
-            <stop offset="0.501518" stopColor="#FFE348" stopOpacity="0.32" />
-            <stop offset="0.639423" stopColor="#FFE348" />
-          </linearGradient>
-          <linearGradient
-            id="paint1_linear_9_71"
-            x1="193.784"
-            y1="370.859"
-            x2="1155.78"
-            y2="370.859"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop offset="0.322115" stopColor="#C88C3E" />
-            <stop offset="0.501518" stopColor="#DC91D9" />
-            <stop offset="0.639423" stopColor="#80D1FD" />
-          </linearGradient>
-        </defs>
-      </svg>
-
-      <div className="absolute left-1/2 top-1/2 h-[1152px] w-[1100px] -translate-x-1/2 -translate-y-1/2 rounded-[1152px] border-[2px] border-white/[0.02]" />
-
-      <div className="absolute left-1/2 top-1/2 h-[988px] w-[944px] -translate-x-1/2 -translate-y-1/2 rounded-[988px] border-[2px] border-white/[0.02]" />
-
-      <div className="absolute left-1/2 top-1/2 h-[784px] w-[748px] -translate-x-1/2 -translate-y-1/2 rounded-[784px] border-[2px] border-white/[0.02]" />
-
-      <div className="absolute left-1/2 top-1/2 h-[558px] w-[532px] -translate-x-1/2 -translate-y-1/2 rounded-[558px] border-[2px] border-white/[0.02]" />
-
-      <div className="absolute left-1/2 top-1/2 h-[400px] w-[382px] -translate-x-1/2 -translate-y-1/2 rounded-[400px] border-[2px] border-white/[0.02]" />
-    </>
+        </div>
+      </div>
+    </div>
   );
 }

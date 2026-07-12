@@ -15,7 +15,8 @@ export default function SectionHeading() {
           textShadow: "0px 0px 40px rgba(255, 255, 255, 0.5)",
         }}
       >
-        Host Anything,<br />
+        Host Anything,
+        <br />
         Host Everything
       </h2>
     </div>

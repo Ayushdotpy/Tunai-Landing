@@ -1,55 +1,63 @@
+import React from "react";
 import Image from "next/image";
 
 export default function HeroContent() {
   return (
-    <div className="relative z-20 flex h-full flex-col items-center px-6 pt-[193px] pb-[179px] text-center">
-      <Image
-        src="/test/logo.svg"
-        alt="Tunyt"
-        width={71}
-        height={24}
-        className="absolute left-1/2 top-[13px] -translate-x-1/2"
-      />
-      <div className="relative w-full max-w-[800px]">
-        {/* Glowing Background Text */}
-        <h1
-          aria-hidden="true"
-          className="absolute inset-0 z-0 text-center font-mosvita text-[42px] font-bold capitalize leading-[1.1] tracking-[-1.2px] text-white opacity-40 blur-[30px] md:text-[60px]"
-          style={{ fontFeatureSettings: "'liga' off, 'clig' off" }}
+    <div className="relative z-10 flex flex-col items-center text-center px-4 pt-[212px] gap-[20px]">
+      <div className="flex flex-col items-center gap-[12px]">
+        <h1 
+          className="text-white"
+        style={{
+          width: "491px",
+          fontFamily: "Mosvita, sans-serif",
+          fontSize: "60px",
+          fontWeight: 700,
+          lineHeight: "110%",
+          letterSpacing: "-1.2px",
+          textTransform: "capitalize",
+          fontFeatureSettings: "'liga' off, 'clig' off",
+          textShadow: "0 0 30px rgba(255, 255, 255, 0.4)"
+        }}
+      >
+        Host What Brings<br />People Together
+      </h1>
+      
+        <p 
+          className="text-white"
+        style={{
+          width: "329px",
+          fontFamily: "Geist, sans-serif",
+          fontSize: "16px",
+          fontWeight: 500,
+          lineHeight: "170%",
+          letterSpacing: "-0.32px",
+            textTransform: "capitalize",
+            opacity: 0.6
+          }}
         >
-          Host What Brings
-          <br />
-          People Together
-        </h1>
-
-        {/* Main Text */}
-        <h1
-          className="relative z-10 text-center font-mosvita text-[42px] font-bold capitalize leading-[1.1] tracking-[-1.2px] text-white md:text-[60px]"
-          style={{ fontFeatureSettings: "'liga' off, 'clig' off" }}
-        >
-          Host What Brings
-          <br />
-          People Together
-        </h1>
+          Create, Manage, And Grow Successful Events<br />
+          From A Single Platform
+        </p>
       </div>
 
-      <p className="mt-3 w-full max-w-[600px] text-center font-geist text-[14px] font-medium capitalize leading-[1.7] tracking-[-0.32px] text-white/60 md:text-[16px]">
-        Create, Manage, And Grow Successful Events
-        <br />
-        From A Single Platform
-      </p>
-
-      <button
-        className="mt-5 flex items-center justify-center gap-3 rounded-full bg-white px-10 py-4 font-inter text-[16px] font-semibold leading-[1.1] tracking-[-0.32px] text-[rgba(0,0,0,0.92)] transition hover:scale-[1.02]"
-        style={{ fontFeatureSettings: "'liga' off, 'clig' off" }}
+      <button 
+        className="flex items-center justify-center gap-2 px-8 transition-transform hover:scale-105 active:scale-95"
+        style={{
+          height: "48px",
+          width: "290px",
+          borderRadius: "16px",
+          background: "linear-gradient(90deg, #D6D6D6 0%, #FFF 50%, #D6D6D6 100%)",
+          color: "rgba(0, 0, 0, 0.92)",
+          fontFamily: "Inter, sans-serif",
+          fontSize: "16px",
+          fontWeight: 600,
+          lineHeight: "110%",
+          letterSpacing: "-0.32px",
+          fontFeatureSettings: "'liga' off, 'clig' off"
+        }}
       >
         Host Your First Event
-        <Image
-          src="/test/icons/party-popper.svg"
-          alt="Party Popper"
-          width={16}
-          height={16}
-        />
+        <Image src="/test/icons/party-popper.svg" alt="Party Popper" width={16} height={16} />
       </button>
     </div>
   );
