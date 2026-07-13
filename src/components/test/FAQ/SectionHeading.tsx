@@ -10,7 +10,7 @@ export default function SectionHeading() {
         Wondering...
       </h2>
 
-      <div className="mt-12 md:mt-24 lg:mt-32 flex flex-col items-start gap-4">
+      <div className="hidden md:flex mt-12 md:mt-24 lg:mt-32 flex-col items-start gap-4">
         <span className="font-geist text-[16px] font-medium tracking-[-0.32px] text-white/[0.32]">
           Your Question isn&apos;t Answered?
         </span>

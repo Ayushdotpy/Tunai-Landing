@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, MotionValue, useTransform } from "framer-motion";
-import { TIMELINE, type Feature } from "./WhyTunyt";
+import { Feature, TIMELINE } from "./WhyTunyt";
 
 interface PhoneProps {
   features: Feature[];

@@ -5,6 +5,7 @@ import { useScroll, useSpring, useTransform, motion } from "framer-motion";
 import Phone from "./Phone";
 import TextContent from "./TextContent";
 import SectionHeading from "./SectionHeading";
+import MobileWhyTunyt from "./MobileWhyTunyt";
 
 export const TIMELINE = [0, 0.33, 0.66, 1];
 
@@ -85,6 +86,8 @@ export default function WhyTunyt() {
 
   // Scroll Jacking Logic for Wheel, Touch, and Pill sync
   useEffect(() => {
+    if (window.innerWidth < 1024) return;
+
     const container = containerRef.current;
     if (!container) return;
 
@@ -216,8 +219,13 @@ export default function WhyTunyt() {
         <SectionHeading />
       </div>
 
-      {/* 2. Sticky scroll-jacking track */}
-      <div ref={containerRef} className="relative h-[400vh] w-full">
+      {/* MOBILE TRACK */}
+      <div className="block lg:hidden">
+        <MobileWhyTunyt features={features} />
+      </div>
+
+      {/* 2. Sticky scroll-jacking track (DESKTOP) */}
+      <div ref={containerRef} className="relative h-[400vh] w-full hidden lg:block">
         <div className="sticky top-0 flex h-screen w-full items-center justify-center overflow-hidden">
           {/* Overlapping, continuous text transitions */}
           <TextContent features={features} progress={smoothProgress} />

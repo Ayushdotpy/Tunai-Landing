@@ -46,16 +46,22 @@ export default function SectionHeading() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
-        className="mt-4 max-w-[600px] text-left font-geist text-[16px] font-medium leading-[1.4] tracking-[-0.32px] opacity-[0.72] text-transparent bg-clip-text"
+        className="mt-4 max-w-[600px] text-left font-geist text-[16px] font-medium leading-[1.4] tracking-[-0.32px] text-[rgba(255,255,255,0.44)]"
         style={{
           fontFeatureSettings: "'liga' off, 'clig' off",
-          backgroundImage:
-            "linear-gradient(270deg, rgba(255, 255, 255, 0.44) 86.56%, #80D1FD 90.7%, #DC91D9 99.99%)",
-          WebkitBackgroundClip: "text",
-          WebkitTextFillColor: "transparent",
         }}
       >
-        tunyt's AI handles the details, helps you improve, and gets better with
+        <span
+          className="text-transparent bg-clip-text"
+          style={{
+            backgroundImage: "linear-gradient(270deg, #80D1FD 0%, #DC91D9 100%)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+          }}
+        >
+          tunyt
+        </span>
+        's AI handles the details, helps you improve, and gets better with
         every event
       </motion.p>
     </div>
