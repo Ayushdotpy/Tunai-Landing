@@ -2,7 +2,7 @@
 
 import { useRef, useEffect } from "react";
 import { useScroll, useSpring, useTransform, motion, MotionValue } from "framer-motion";
-import { Feature } from "./WhyTunyt";
+import type { Feature } from "./WhyTunyt";
 
 interface MobileWhyTunytProps {
   features: Feature[];
