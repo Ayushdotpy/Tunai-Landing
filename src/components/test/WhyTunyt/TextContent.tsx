@@ -1,7 +1,8 @@
 "use client";
 
 import { motion, MotionValue, useTransform } from "framer-motion";
-import { TIMELINE, type Feature } from "./WhyTunyt";
+import type { Feature } from "./WhyTunyt";
+import { TIMELINE } from "./WhyTunyt";
 
 interface TextContentProps {
   features: Feature[];

@@ -27,15 +27,37 @@ export default function CTAContent() {
       </div>
 
       <button
-        className="mt-8 flex items-center justify-center gap-[6px] rounded-full bg-white px-10 py-4 font-inter text-[16px] font-semibold leading-[1.1] tracking-[-0.32px] text-[rgba(0,0,0,0.92)] transition hover:scale-[1.02]"
-        style={{ fontFeatureSettings: "'liga' off, 'clig' off" }}
+        className="mt-8 flex h-[48px] items-center justify-center gap-[10.5px] overflow-hidden rounded-[16px] transition hover:scale-[1.02]"
+        style={{
+          background: "linear-gradient(90deg, #D6D6D6 0%, #FFF 50%, #D6D6D6 100%)",
+          color: "rgba(0, 0, 0, 0.92)",
+        }}
       >
-        Host Your First Event
-        <Image
-          src="/test/icons/party-popper.svg"
-          alt="Party Popper"
-          width={16}
-          height={16}
+        <Image 
+          src="/test/icons/button-vector.svg" 
+          alt="" 
+          width={64} 
+          height={48} 
+          className="h-full w-auto object-cover" 
+        />
+        <span 
+          className="flex items-center gap-[6px] font-inter text-[16px] font-semibold leading-[1.1] tracking-[-0.32px] whitespace-nowrap"
+          style={{ fontFeatureSettings: "'liga' off, 'clig' off" }}
+        >
+          Host Your First Event
+          <Image
+            src="/test/icons/party-popper.svg"
+            alt="Party Popper"
+            width={16}
+            height={16}
+          />
+        </span>
+        <Image 
+          src="/test/icons/button-vector.svg" 
+          alt="" 
+          width={64} 
+          height={48} 
+          className="h-full w-auto scale-x-[-1] object-cover" 
         />
       </button>
     </div>

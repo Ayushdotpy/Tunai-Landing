@@ -1,7 +1,8 @@
 "use client";
 
 import { motion, MotionValue, useTransform } from "framer-motion";
-import { TIMELINE, type Feature } from "./WhyTunyt";
+import type { Feature } from "./WhyTunyt";
+import { TIMELINE } from "./WhyTunyt";
 
 interface PhoneProps {
   features: Feature[];
@@ -46,8 +47,9 @@ export default function Phone({ features, progress }: PhoneProps) {
           {/* Screen container spanning 100% of phone layout width */}
           <motion.div
             style={{ width: "100%" }}
-            className="relative w-full aspect-[682/1404] overflow-hidden rounded-[40px] bg-[#0a0a0a]"
+            className="relative w-full aspect-[682/1404] flex items-center justify-center"
           >
+            {/* All screens include the phone body, so we render them full size */}
             {features.map((feature, i) => (
               <ScreenItem
                 key={i}
@@ -71,6 +73,7 @@ function ScreenItem({
   src: string;
   index: number;
   progress: MotionValue<number>;
+  isFullPhone?: boolean;
 }) {
   let input = [0, 0, 0, 0];
   let opacityOutput = [0, 0, 0, 0];
@@ -86,8 +89,8 @@ function ScreenItem({
     xOutput = ["20px", "0px", "0px", "-20px"];
   } else if (index === 2) {
     input = [0.396, 0.596, 0.726, 0.926];
-    opacityOutput = [0, 1, 1, 0];
-    xOutput = ["20px", "0px", "0px", "-20px"];
+    opacityOutput = [0, 1, 1, 1];
+    xOutput = ["20px", "0px", "0px", "0px"];
   } else if (index === 3) {
     input = [0.726, 0.926, 1.0, 1.1];
     opacityOutput = [0, 1, 1, 1];
@@ -97,14 +100,12 @@ function ScreenItem({
   const opacity = useTransform(progress, input, opacityOutput);
   const x = useTransform(progress, input, xOutput);
 
-  const isLast = index === 3;
-
   return (
     <motion.img
       src={src}
       alt={`Screen ${index + 1}`}
       style={{ opacity, x }}
-      className={`absolute inset-x-0 w-full h-auto ${isLast ? "bottom-0" : "top-0"}`}
+      className="absolute inset-0 w-full h-full object-contain z-30"
     />
   );
 }

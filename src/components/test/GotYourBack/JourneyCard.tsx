@@ -36,7 +36,7 @@ export default function CategoryCards() {
       {/* ---------------- CARD 1: BEFORE ---------------- */}
       <motion.div
         variants={cardVariants}
-        className="group relative mx-auto flex w-full max-w-[397px] h-[340px] md:h-[407px] flex-col overflow-hidden rounded-[32px] md:rounded-[44px] transition-all duration-500 ease-out hover:-translate-y-[6px] hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(255,255,255,0.08)]"
+        className="group relative mx-auto flex w-full max-w-[397px] h-[340px] md:h-[407px] flex-col overflow-hidden rounded-[32px] md:rounded-[44px] transition-all duration-500 ease-out hover:-translate-y-[6px] hover:shadow-[0_0_40px_rgba(255,255,255,0.08)]"
         style={{
           background:
             "radial-gradient(135.38% 51.98% at 50.13% 23.83%, #000 0%, #0F0F0F 100%)",
@@ -58,7 +58,7 @@ export default function CategoryCards() {
               repeatType: "reverse",
               ease: "easeInOut",
             }}
-            className="w-full transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+            className="w-full transition-transform duration-500 ease-out"
           >
             <Image
               src="/test/images/Before.png"
@@ -94,7 +94,7 @@ export default function CategoryCards() {
       {/* ---------------- CARD 2: DURING ---------------- */}
       <motion.div
         variants={cardVariants}
-        className="group relative mx-auto flex w-full max-w-[397px] h-[340px] md:h-[407px] flex-col overflow-hidden rounded-[32px] md:rounded-[44px] transition-all duration-500 ease-out hover:-translate-y-[6px] hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(255,255,255,0.08)]"
+        className="group relative mx-auto flex w-full max-w-[397px] h-[340px] md:h-[407px] flex-col overflow-hidden rounded-[32px] md:rounded-[44px] transition-all duration-500 ease-out hover:-translate-y-[6px] hover:shadow-[0_0_40px_rgba(255,255,255,0.08)]"
         style={{
           background:
             "radial-gradient(135.38% 51.98% at 50.13% 23.83%, #000 0%, #0F0F0F 100%)",
@@ -109,7 +109,7 @@ export default function CategoryCards() {
               repeatType: "reverse",
               ease: "easeInOut",
             }}
-            className="w-full transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+            className="w-full transition-transform duration-500 ease-out"
           >
             <Image
               src="/test/images/During.png"
@@ -153,7 +153,7 @@ export default function CategoryCards() {
       {/* ---------------- CARD 3: AFTER ---------------- */}
       <motion.div
         variants={cardVariants}
-        className="group relative mx-auto flex w-full max-w-[397px] h-[340px] md:h-[407px] flex-col overflow-hidden rounded-[32px] md:rounded-[44px] transition-all duration-500 ease-out hover:-translate-y-[6px] hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(255,255,255,0.08)]"
+        className="group relative mx-auto flex w-full max-w-[397px] h-[340px] md:h-[407px] flex-col overflow-hidden rounded-[32px] md:rounded-[44px] transition-all duration-500 ease-out hover:-translate-y-[6px] hover:shadow-[0_0_40px_rgba(255,255,255,0.08)]"
         style={{
           background:
             "radial-gradient(135.38% 51.98% at 50.13% 23.83%, #000 0%, #0F0F0F 100%)",
@@ -175,7 +175,7 @@ export default function CategoryCards() {
               repeatType: "reverse",
               ease: "easeInOut",
             }}
-            className="w-full transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+            className="w-full transition-transform duration-500 ease-out"
           >
             <Image
               src="/test/images/After.png"

@@ -6,8 +6,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function FloatingIcons() {
   const { scrollY } = useScroll();
-
-  // Dramatically randomized parallax scrolling offsets.
+  
+  // Dramatically randomized parallax scrolling offsets. 
   // All icons move up when scrolling down, but at wildly different speeds for a 3D effect.
   const y1 = useTransform(scrollY, [0, 1000], [0, -400]);
   const y2 = useTransform(scrollY, [0, 1000], [0, -150]);
@@ -28,20 +28,8 @@ export default function FloatingIcons() {
           y: y1,
         }}
       >
-        <Image
-          src="/test/icons/people1.png"
-          alt="People"
-          fill
-          className="object-contain"
-          style={{ opacity: 0.8, filter: "blur(8.4px)" }}
-        />
-        <Image
-          src="/test/icons/people1.png"
-          alt="People Layer 2"
-          fill
-          className="object-contain"
-          style={{ opacity: 0.8, filter: "blur(54px)" }}
-        />
+        <Image src="/test/icons/people1.png" alt="People" fill className="object-contain" style={{ opacity: 0.8, filter: "blur(8.4px)" }} />
+        <Image src="/test/icons/people1.png" alt="People Layer 2" fill className="object-contain" style={{ opacity: 0.8, filter: "blur(54px)" }} />
       </motion.div>
 
       {/* 2. Star (Mid Top Left) */}
@@ -52,26 +40,9 @@ export default function FloatingIcons() {
           y: y2,
         }}
       >
-        <Image
-          src="/test/icons/star.png"
-          alt="Star"
-          fill
-          className="object-contain"
-        />
-        <Image
-          src="/test/icons/star2.png"
-          alt="Star Layer 2"
-          fill
-          className="object-contain"
-          style={{ mixBlendMode: "overlay", filter: "blur(3.23px)" }}
-        />
-        <Image
-          src="/test/icons/star.png"
-          alt="Star Layer 3"
-          fill
-          className="object-contain"
-          style={{ filter: "blur(21.15px)" }}
-        />
+        <Image src="/test/icons/star.png" alt="Star" fill className="object-contain" />
+        <Image src="/test/icons/star2.png" alt="Star Layer 2" fill className="object-contain" style={{ mixBlendMode: "overlay", filter: "blur(3.23px)" }} />
+        <Image src="/test/icons/star.png" alt="Star Layer 3" fill className="object-contain" style={{ filter: "blur(21.15px)" }} />
       </motion.div>
 
       {/* 3. Analytics (Mid Bottom Left) */}
@@ -82,20 +53,8 @@ export default function FloatingIcons() {
           y: y3,
         }}
       >
-        <Image
-          src="/test/icons/analytics.png"
-          alt="Analytics"
-          fill
-          className="object-contain"
-          style={{ filter: "blur(1.62px)" }}
-        />
-        <Image
-          src="/test/icons/analytics.png"
-          alt="Analytics Layer 2"
-          fill
-          className="object-contain"
-          style={{ filter: "blur(54px)" }}
-        />
+        <Image src="/test/icons/analytics.png" alt="Analytics" fill className="object-contain" style={{ filter: "blur(1.62px)" }} />
+        <Image src="/test/icons/analytics.png" alt="Analytics Layer 2" fill className="object-contain" style={{ filter: "blur(54px)" }} />
       </motion.div>
 
       {/* 4. Trophy (Bottom Left) */}
@@ -106,20 +65,8 @@ export default function FloatingIcons() {
           y: y4,
         }}
       >
-        <Image
-          src="/test/icons/trophy.png"
-          alt="Trophy"
-          fill
-          className="object-contain"
-          style={{ opacity: 0.7, filter: "blur(4.16px)" }}
-        />
-        <Image
-          src="/test/icons/trophy.png"
-          alt="Trophy Layer 2"
-          fill
-          className="object-contain"
-          style={{ opacity: 0.7, filter: "blur(54px)" }}
-        />
+        <Image src="/test/icons/trophy.png" alt="Trophy" fill className="object-contain" style={{ opacity: 0.7, filter: "blur(4.16px)" }} />
+        <Image src="/test/icons/trophy.png" alt="Trophy Layer 2" fill className="object-contain" style={{ opacity: 0.7, filter: "blur(54px)" }} />
       </motion.div>
 
       {/* 5. Calendar (Top Right) */}
@@ -130,20 +77,8 @@ export default function FloatingIcons() {
           y: y5,
         }}
       >
-        <Image
-          src="/test/icons/calendar.png"
-          alt="Calendar"
-          fill
-          className="object-contain"
-          style={{ filter: "blur(3.92px)" }}
-        />
-        <Image
-          src="/test/icons/calendar.png"
-          alt="Calendar Layer 2"
-          fill
-          className="object-contain"
-          style={{ filter: "blur(54px)" }}
-        />
+        <Image src="/test/icons/calendar.png" alt="Calendar" fill className="object-contain" style={{ filter: "blur(3.92px)" }} />
+        <Image src="/test/icons/calendar.png" alt="Calendar Layer 2" fill className="object-contain" style={{ filter: "blur(54px)" }} />
       </motion.div>
 
       {/* 6. Hourglass (Mid Right) */}
@@ -153,20 +88,8 @@ export default function FloatingIcons() {
           y: y6,
         }}
       >
-        <Image
-          src="/test/icons/hourglass.png"
-          alt="Hourglass"
-          fill
-          className="object-contain"
-          style={{ filter: "blur(2.5px)" }}
-        />
-        <Image
-          src="/test/icons/hourglass.png"
-          alt="Hourglass Layer 2"
-          fill
-          className="object-contain"
-          style={{ filter: "blur(54px)" }}
-        />
+        <Image src="/test/icons/hourglass.png" alt="Hourglass" fill className="object-contain" style={{ filter: "blur(2.5px)" }} />
+        <Image src="/test/icons/hourglass.png" alt="Hourglass Layer 2" fill className="object-contain" style={{ filter: "blur(54px)" }} />
       </motion.div>
 
       {/* 7. Money (Bottom Right) */}
@@ -177,20 +100,8 @@ export default function FloatingIcons() {
           y: y7,
         }}
       >
-        <Image
-          src="/test/icons/money.png"
-          alt="Money"
-          fill
-          className="object-contain"
-          style={{ opacity: 0.8, filter: "blur(8.475px)" }}
-        />
-        <Image
-          src="/test/icons/money.png"
-          alt="Money Layer 2"
-          fill
-          className="object-contain"
-          style={{ opacity: 0.8, filter: "blur(54px)" }}
-        />
+        <Image src="/test/icons/money.png" alt="Money" fill className="object-contain" style={{ opacity: 0.8, filter: "blur(8.475px)" }} />
+        <Image src="/test/icons/money.png" alt="Money Layer 2" fill className="object-contain" style={{ opacity: 0.8, filter: "blur(54px)" }} />
       </motion.div>
 
       {/* 8. Toggle (Mid Bottom Right) */}
@@ -201,19 +112,8 @@ export default function FloatingIcons() {
           y: y8,
         }}
       >
-        <Image
-          src="/test/icons/toggle.png"
-          alt="Toggle"
-          fill
-          className="object-contain"
-        />
-        <Image
-          src="/test/icons/toggle.png"
-          alt="Toggle Layer 2"
-          fill
-          className="object-contain"
-          style={{ filter: "blur(54px)" }}
-        />
+        <Image src="/test/icons/toggle.png" alt="Toggle" fill className="object-contain" />
+        <Image src="/test/icons/toggle.png" alt="Toggle Layer 2" fill className="object-contain" style={{ filter: "blur(54px)" }} />
       </motion.div>
     </div>
   );

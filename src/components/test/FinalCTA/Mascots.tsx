@@ -7,7 +7,7 @@ export default function Mascots() {
       <div
         className="absolute left-1/2 z-0"
         style={{
-          top: "66%",
+          top: "57%",
           width: "150%",
           height: "1000px",
           transform: "translateX(-50%) rotate(5.54deg)",
